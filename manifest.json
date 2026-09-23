@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "CIMEA Assistant Pro",
+  "version": "1.0.0",
+  "description": "Enterprise-grade workflow automation helper and status assistant for CIMEA DiploMe portal.",
+  "author": "Mohammad Nomer",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.cimea-diplome.it/*",
+        "*://*.cimea.it/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CIMEA Assistant Pro"
+  }
+}
